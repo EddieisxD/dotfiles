@@ -36,9 +36,10 @@ hl.monitor({
 ---------------------
 
 -- Set programs that you use
-local terminal    = "kitty"
-local fileManager = "dolphin"
-local menu        = "hyprlauncher"
+local terminal     = "kitty"
+local fileManager  = "dolphin"
+-- local menu        = "hyprlauncher"
+local noctalia_ipc = "qs -c noctalia-shell ipc call"
 
 
 -------------------
@@ -50,11 +51,9 @@ local menu        = "hyprlauncher"
 -- Autostart necessary processes (like notifications daemons, status bars, etc.)
 -- Or execute your favorite apps at launch like this:
 --
--- hl.on("hyprland.start", function () 
---   hl.exec_cmd(terminal)
---   hl.exec_cmd("nm-applet")
---   hl.exec_cmd("waybar & hyprpaper & firefox")
--- end)
+hl.on("hyprland.start", function()
+    hl.exec_cmd("qs -c noctalia-shell")
+end)
 
 
 -------------------------------
@@ -122,7 +121,7 @@ hl.config({
         rounding       = 10,
         rounding_power = 2,
 
-        -- Change transparency of focused and unfocused windows
+        -- Change transparency of focused and unfo""qs -c noctalia-shell ipc callcused windows
         active_opacity   = 1.0,
         inactive_opacity = 1.0,
 
@@ -274,7 +273,11 @@ local closeWindowBind = hl.bind(mainMod .. " + Q", hl.dsp.window.close())
 hl.bind(mainMod .. " + L", hl.dsp.exec_cmd("command -v hyprshutdown >/dev/null 2>&1 && hyprshutdown || hyprctl dispatch 'hl.dsp.exit()'"))
 hl.bind(mainMod .. " + E", hl.dsp.exec_cmd(fileManager))
 hl.bind(mainMod .. " + V", hl.dsp.window.float({ action = "toggle" }))
-hl.bind(mainMod .. " + R", hl.dsp.exec_cmd(menu))
+hl.bind(mainMod .. " + SHIFT + V", hl.dsp.exec_cmd(noctalia_ipc .. " " .. "launcher clipboard"))
+hl.bind(mainMod .. " + A", hl.dsp.exec_cmd(noctalia_ipc .. " " .. "launcher toggle"))
+hl.bind(mainMod .. " + Tab", hl.dsp.focus({ workspace = "e+1" }))
+hl.bind("ALT" .. " + Tab", hl.dsp.window.cycle_next())
+
 hl.bind(mainMod .. " + P", hl.dsp.window.pseudo())
 hl.bind(mainMod .. " + J", hl.dsp.layout("togglesplit"))    -- dwindle only
 
