@@ -53,6 +53,7 @@ local noctalia_ipc = "qs -c noctalia-shell ipc call"
 --
 hl.on("hyprland.start", function()
     hl.exec_cmd("qs -c noctalia-shell")
+    hl.exec_cmd("dbus-update-activation-environment --systemd WAYLAND_DISPLAY XDG_CURRENT_DESKTOP")
 end)
 
 
