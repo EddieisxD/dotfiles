@@ -86,6 +86,7 @@ hl.env("HYPRCURSOR_SIZE", "24")
 -- hl.permission("/usr/(bin|local/bin)/hyprpm", "plugin", "allow")
 
 
+
 -----------------------
 ---- LOOK AND FEEL ----
 -----------------------
@@ -242,7 +243,7 @@ hl.config({
         sensitivity = 0, -- -1.0 - 1.0, 0 means no modification.
 
         touchpad = {
-            natural_scroll = false,
+            natural_scroll = true,
         },
     },
 })
@@ -277,7 +278,10 @@ hl.bind(mainMod .. " + V", hl.dsp.window.float({ action = "toggle" }))
 hl.bind(mainMod .. " + SHIFT + V", hl.dsp.exec_cmd(noctalia_ipc .. " " .. "launcher clipboard"))
 hl.bind(mainMod .. " + A", hl.dsp.exec_cmd(noctalia_ipc .. " " .. "launcher toggle"))
 hl.bind(mainMod .. " + Tab", hl.dsp.focus({ workspace = "e+1" }))
-hl.bind("ALT" .. " + Tab", hl.dsp.window.cycle_next())
+hl.bind("ALT" .. " + Tab", hl.dsp.window.cycle_next({ tiled = true }))
+hl.bind("SUPER + GRAVE", hl.dsp.focus({ last = true }))
+
+
 
 hl.bind(mainMod .. " + P", hl.dsp.window.pseudo())
 hl.bind(mainMod .. " + J", hl.dsp.layout("togglesplit"))    -- dwindle only

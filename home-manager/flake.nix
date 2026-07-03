@@ -11,7 +11,7 @@
     pkgs   = import nixpkgs { inherit system; config.allowUnfree = true; };
     user   = "addy";
   in {
-    homeConfiguration.${user} = home-manager.lib.homeManagerConfiguration {
+    homeConfigurations.${user} = home-manager.lib.homeManagerConfiguration {
       inherit pkgs;
       modules = [ ./home.nix ];
     }; 

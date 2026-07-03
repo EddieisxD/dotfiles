@@ -1,0 +1,21 @@
+{
+    "workbench.activityBar.compact": true,
+    "workbench.activityBar.location": "top",
+    "workbench.sideBar.location": "right",
+    "workbench.editor.titleScrollbarVisibility": "hidden",
+    "workbench.browser.showInTitleBar": false,
+    "workbench.navigationControl.enabled": false,
+    "workbench.colorTheme": "cursor-dark",
+    "files.autoSave": "afterDelay",
+    "window.menuBarVisibility": "compact",
+    "workbench.layoutControl.enabled": false,
+    "extensions.experimental.affinity": {
+        "asvetliakov.vscode-neovim": 1
+    },
+    "editor.hover.sticky": false,
+    "editor.stickyScroll.enabled": false,
+    "editor.stickyScroll.scrollWithEditor": false,
+    "workbench.tree.enableStickyScroll": false,
+    "terminal.integrated.stickyScroll.enabled": false,
+    "editor.lineNumbers": "relative"
+}

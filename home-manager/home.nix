@@ -15,9 +15,12 @@
   # release notes.
   home.stateVersion = "26.05"; # Please read the comment before changing.
 
-  nix.settings = {
-    experimental-features = [ "nix-command" "flakes" ];
-    auto-optimise-store = true;
+  nix = {
+    package = pkgs.nix;
+    settings = {
+      experimental-features = [ "nix-command" "flakes" ];
+      auto-optimise-store = true;
+    };
   };
 
   # The home.packages option allows you to install Nix packages into your
