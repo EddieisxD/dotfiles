@@ -38,7 +38,6 @@ hl.monitor({
 -- Set programs that you use
 local terminal     = "kitty"
 local fileManager  = "dolphin"
--- local menu        = "hyprlauncher"
 local noctalia_ipc = "qs -c noctalia-shell ipc call"
 
 
@@ -52,8 +51,12 @@ local noctalia_ipc = "qs -c noctalia-shell ipc call"
 -- Or execute your favorite apps at launch like this:
 --
 hl.on("hyprland.start", function()
+    hl.exec_cmd("gsettings set org.gnome.desktop.interface color-scheme prefer-dark")
+    hl.exec_cmd("gsettings set org.gnome.desktop.interface gtk-theme adw-gtk3-dark")
     hl.exec_cmd("qs -c noctalia-shell")
     hl.exec_cmd("dbus-update-activation-environment --systemd WAYLAND_DISPLAY XDG_CURRENT_DESKTOP")
+    hl.exec_cmd("systemctl --user import-environment WAYLAND_DISPLAY XDG_CURRENT_DESKTOP")
+    hl.exec_cmd([[echo "Xft.dpi: 120" | xrdb -merge]])
 end)
 
 
@@ -65,6 +68,20 @@ end)
 
 hl.env("XCURSOR_SIZE", "24")
 hl.env("HYPRCURSOR_SIZE", "24")
+
+hl.env("ELECTRON_OZONE_PLATFORM_HINT","wayland")
+hl.env("MOZ_ENABLE_WAYLAND","1")
+
+hl.env("GDK_BACKEND","wayland")
+hl.env("QT_QPA_PLATFORM","wayland")
+
+hl.env("AQ_DRM_DEVICES","/dev/dri/card2:/dev/dri/card1")
+hl.env("XDG_SCREENSHOTS_DIR", "$HOME/Pictures/Screenshots")
+
+
+hl.env("GTK_APPLICATION_PREFER_DARK_THEME","1")
+hl.env("XDG_CURRENT_DESKTOP","Hyprland")
+hl.env("QT_QPA_PLATFORMTHEME","qt6ct")
 
 
 -----------------------
@@ -144,6 +161,10 @@ hl.config({
 
     animations = {
         enabled = true,
+    },
+
+    xwayland = {
+	force_zero_scaling = true
     },
 })
 
