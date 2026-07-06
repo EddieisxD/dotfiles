@@ -1,5 +1,7 @@
 
 set -g fish_greeting ""
+set -gx EDITOR nvim
+set -g fish_key_bindings fish_vi_key_bindings
 
 alias v nvim
 alias z zeditor
