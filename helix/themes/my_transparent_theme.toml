@@ -1,0 +1,6 @@
+inherits = "gruvbox" # Replace with your preferred built-in theme name
+
+# Overrides to make the background transparent
+"ui.background" = { bg = "none" }
+"ui.virtual.whitespace" = { bg = "none" }
+

@@ -1,28 +1,12 @@
-vim.opt.clipboard = 'unnamedplus'
 
--- require("transparent.nvim")
-
-local function apply_transparency()
-  local groups = {
-    "Normal", "NormalNC",
-    "NonText", "EndOfBuffer",
-    "SignColumn",
-    "LineNr", "FoldColumn",
-    "VertSplit",
-    "StatusLine", "StatusLineNC",
-    "MsgArea",
-  }
-  for _, g in ipairs(groups) do
-    vim.api.nvim_set_hl(0, g, { bg = "none" })
-  end
+if vim.loader then
+  vim.loader.enable()
 end
 
-vim.api.nvim_create_augroup("TransparentNvim", { clear = true })
+-- require("vim._core.ui2").enable({})
+require("autocommands")
+require("options")
+require("keybinds")
+require("transparent_nvim")
 
-vim.api.nvim_create_autocmd("ColorScheme", {
-  group = "TransparentNvim",
-  callback = apply_transparency,
-})
-
--- run immediately on startup (important)
-apply_transparency()
+require("lazy_plugin_manager")

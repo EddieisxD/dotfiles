@@ -37,7 +37,7 @@ hl.monitor({
 
 -- Set programs that you use
 local terminal     = "kitty"
-local fileManager  = "dolphin"
+local fileManager  = "nemo"
 local noctalia_ipc = "qs -c noctalia-shell ipc call"
 
 

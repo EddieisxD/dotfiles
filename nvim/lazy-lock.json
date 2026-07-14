@@ -1,0 +1,13 @@
+{
+  "blink.cmp": { "branch": "main", "commit": "db8ea0b7c7ab8c8f8faa3912833c1671381e6304" },
+  "blink.lib": { "branch": "main", "commit": "5876dd95deeb70aadbe9f1c0b7117a135061cdac" },
+  "fidget.nvim": { "branch": "main", "commit": "6f793b2bcd2d35e201c09520f698bb763220908a" },
+  "friendly-snippets": { "branch": "main", "commit": "6cd7280adead7f586db6fccbd15d2cac7e2188b9" },
+  "lazy.nvim": { "branch": "main", "commit": "306a05526ada86a7b30af95c5cc81ffba93fef97" },
+  "lualine.nvim": { "branch": "master", "commit": "221ce6b2d999187044529f49da6554a92f740a96" },
+  "nvim-autopairs": { "branch": "master", "commit": "7b9923abad60b903ece7c52940e1321d39eccc79" },
+  "nvim-treesitter": { "branch": "main", "commit": "4916d6592ede8c07973490d9322f187e07dfefac" },
+  "nvim-web-devicons": { "branch": "master", "commit": "0ca28b61a04fe7426cefbdd52c2647ef0e335b5f" },
+  "orgmode": { "branch": "master", "commit": "f32a06d4b5399dad8bf0478c772bf6c513f02dcf" },
+  "render-markdown.nvim": { "branch": "main", "commit": "f422cb5c6855f150e2ddcfaf44e7157b98b34f6a" }
+}
