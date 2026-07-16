@@ -36,7 +36,7 @@ hl.monitor({
 ---------------------
 
 -- Set programs that you use
-local terminal     = "kitty"
+local terminal     = "ghostty"
 local fileManager  = "nemo"
 local noctalia_ipc = "qs -c noctalia-shell ipc call"
 
@@ -298,6 +298,7 @@ hl.bind(mainMod .. " + E", hl.dsp.exec_cmd(fileManager))
 hl.bind(mainMod .. " + V", hl.dsp.window.float({ action = "toggle" }))
 hl.bind(mainMod .. " + SHIFT + V", hl.dsp.exec_cmd(noctalia_ipc .. " " .. "launcher clipboard"))
 hl.bind(mainMod .. " + A", hl.dsp.exec_cmd(noctalia_ipc .. " " .. "launcher toggle"))
+hl.bind(mainMod .. " + W", hl.dsp.exec_cmd(noctalia_ipc .. " " .. "wallpaper toggle"))
 hl.bind(mainMod .. " + B", hl.dsp.exec_cmd(noctalia_ipc .. " " .. "bar toggle"))
 hl.bind(mainMod .. " + Tab", hl.dsp.focus({ workspace = "e+1" }))
 hl.bind("ALT" .. " + Tab", hl.dsp.window.cycle_next({ tiled = true }))
@@ -398,3 +399,11 @@ hl.window_rule({
     move  = "20 monitor_h-120",
     float = true,
 })
+
+-- hl.window_rule({
+--     name = "transparent neovide",
+--     match = {
+--         class = "neovide"
+--     },
+--     opacity = 0.6,
+-- })

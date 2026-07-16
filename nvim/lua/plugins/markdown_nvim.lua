@@ -1,27 +1,33 @@
 return {
     'MeanderingProgrammer/render-markdown.nvim',
-    ft = { "markdown", "org", "norg" },
-    -- dependencies = { 'nvim-treesitter/nvim-treesitter', 'nvim-mini/mini.nvim' },            -- if you use the mini.nvim suite
-    -- dependencies = { 'nvim-treesitter/nvim-treesitter', 'nvim-mini/mini.icons' },        -- if you use standalone mini plugins
-    dependencies = { 'nvim-treesitter/nvim-treesitter', 'nvim-tree/nvim-web-devicons' }, -- if you prefer nvim-web-devicons
-    ---@module 'render-markdown'
-    ---@type render.md.UserConfig
+    dependencies = { 'nvim-treesitter/nvim-treesitter', 'nvim-tree/nvim-web-devicons' },
+    ft = { "markdown", "norg", "rmd", "org" },
     opts = {
-        render_modes = true,
         enabled_filetypes = { "markdown", "org", "norg", "rmd" },
+        preset = "obsidian",
+        acknowledge_conflicts = true,
+        debounce = 30,
         heading = {
-            enabled = true,
-            render_modes = false,
-            atx = true,
-            setext = true,
-            sign = true,
-            icons = { '󰲡 ', '󰲣 ', '󰲥 ', '󰲧 ', '󰲩 ', '󰲫 ' },
-            position = 'overlay',
-            signs = { '󰫎 ' },
-            width = 'full',
-            border = false,
-            preset = "obsidian",
-            background = false,
-        }
+            border = true,
+        },
+        bullet = {
+            icons = { '●', '○', '▪', '▫' },
+        },
+        anti_conceal = {
+            ignore = {
+                code_background = true,
+                indent = true,
+                sign = true,
+                virtual_lines = true,
+                bullet = true,
+                head_icon = true,
+                head_background = true,
+                head_border = true,
+            },
+        },
     },
+    config = function(_, opts)
+        require('render-markdown').setup(opts)
+        require('theme.render-markdown').apply()
+    end,
 }

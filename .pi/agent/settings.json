@@ -1,0 +1,11 @@
+{
+  "defaultModel": "qwen3.5:latest",
+  "defaultProvider": "ollama",
+  "defaultThinkingLevel": "low",
+  "enableInstallTelemetry": false,
+  "lastChangelogVersion": "0.80.6",
+  "theme": "dark",
+  "packages": [
+    "npm:@ollama/pi-web-search"
+  ]
+}

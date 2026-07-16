@@ -1,0 +1,15 @@
+{"type":"session","version":3,"id":"019f525a-9091-74a8-8163-ed332d19d01b","timestamp":"2026-07-11T18:04:54.801Z","cwd":"/home/addy/Projects/litellm-deploy"}
+{"type":"model_change","id":"bd961cb0","parentId":null,"timestamp":"2026-07-11T18:04:54.813Z","provider":"anthropic","modelId":"claude-opus-4-8"}
+{"type":"thinking_level_change","id":"cc0f701b","parentId":"bd961cb0","timestamp":"2026-07-11T18:04:54.813Z","thinkingLevel":"low"}
+{"type":"model_change","id":"454643ff","parentId":"cc0f701b","timestamp":"2026-07-11T18:04:59.794Z","provider":"freellmapi","modelId":"auto"}
+{"type":"message","id":"ebfba238","parentId":"454643ff","timestamp":"2026-07-11T18:05:01.722Z","message":{"role":"user","content":[{"type":"text","text":"hi"}],"timestamp":1783793101712}}
+{"type":"message","id":"b7c78348","parentId":"ebfba238","timestamp":"2026-07-11T18:05:02.699Z","message":{"role":"assistant","content":[{"type":"thinking","thinking":"The user just said \"hi\" which is a greeting. I should respond in a friendly and concise manner, letting them know I'm here to help with coding tasks.","thinkingSignature":"reasoning"},{"type":"text","text":"Hi! 👋 I'm here to help you with your coding tasks. I can read files, execute commands, edit code, and help you with your projects. What would you like to work on today?"}],"api":"openai-completions","provider":"freellmapi","model":"auto","usage":{"input":0,"output":0,"cacheRead":0,"cacheWrite":0,"totalTokens":0,"cost":{"input":0,"output":0,"cacheRead":0,"cacheWrite":0,"total":0}},"stopReason":"stop","timestamp":1783793101743,"responseId":"chatcmpl-0d619cd5-8584-48fd-be08-bce9e004d3e7","responseModel":"zai-glm-4.7"}}
+{"type":"model_change","id":"e3c30b00","parentId":"b7c78348","timestamp":"2026-07-11T18:05:22.271Z","provider":"anthropic","modelId":"claude-fable-5"}
+{"type":"model_change","id":"b68edb9f","parentId":"e3c30b00","timestamp":"2026-07-11T18:05:23.721Z","provider":"anthropic","modelId":"claude-haiku-4-5"}
+{"type":"model_change","id":"3dbfecb2","parentId":"b68edb9f","timestamp":"2026-07-11T18:05:23.981Z","provider":"anthropic","modelId":"claude-haiku-4-5-20251001"}
+{"type":"model_change","id":"dde8ea5d","parentId":"3dbfecb2","timestamp":"2026-07-11T18:05:24.281Z","provider":"anthropic","modelId":"claude-opus-4-1"}
+{"type":"model_change","id":"f0495d39","parentId":"dde8ea5d","timestamp":"2026-07-11T18:05:25.658Z","provider":"anthropic","modelId":"claude-opus-4-1-20250805"}
+{"type":"model_change","id":"2455d727","parentId":"f0495d39","timestamp":"2026-07-11T18:05:25.806Z","provider":"anthropic","modelId":"claude-opus-4-5"}
+{"type":"model_change","id":"907e802f","parentId":"2455d727","timestamp":"2026-07-11T18:05:25.954Z","provider":"anthropic","modelId":"claude-opus-4-5-20251101"}
+{"type":"model_change","id":"e020de2f","parentId":"907e802f","timestamp":"2026-07-11T18:05:26.141Z","provider":"anthropic","modelId":"claude-opus-4-6"}
+{"type":"model_change","id":"bce00fa6","parentId":"e020de2f","timestamp":"2026-07-11T18:05:37.595Z","provider":"freellmapi","modelId":"auto"}

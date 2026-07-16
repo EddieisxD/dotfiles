@@ -46,8 +46,8 @@ vim.opt.clipboard:append('unnamedplus')
 --- UI and Appearance
 vim.o.termguicolors = true -- Enable true color (24-bit color)
 vim.o.background = "dark"  -- Hint to colorschemes ("light" or "dark")
-vim.o.showmode = true      -- Don't show --INSERT-- in status line
-vim.o.cmdheight = 0        -- Height of the command line
+vim.o.showmode = false      -- Don't show --INSERT-- in status line
+vim.o.cmdheight = 1        -- Height of the command line
 vim.o.pumheight = 10       -- Max height of popup menu (completions)
 vim.o.pumblend = 10        -- Transparency of popup menus
 vim.opt.laststatus = 3
@@ -65,7 +65,7 @@ vim.opt.guicursor:append("n-v-c:block-CursorNormal")
 vim.opt.guicursor:append("i-ci-ve:block-CursorBlue")
 vim.opt.guicursor:append("r-cr:hor20,o:hor50")
 vim.api.nvim_set_hl(0, "CursorNormal", { fg = "#000000", bg = "#FAFAFA" }) -- Blue block for Normal
-vim.api.nvim_set_hl(0, "CursorBlue",   { fg = "#000000", bg = "#89b4fa" }) -- Green line for Insert
+vim.api.nvim_set_hl(0, "CursorBlue",   { fg = "#000000", bg = "#B8CC52" }) -- Green line for Insert
 
 --- Search
 vim.o.hlsearch = true          -- Highlight all search matches

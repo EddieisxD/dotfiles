@@ -2,7 +2,6 @@
 mozilla/
 pulse/
 Antigravity IDE/
-btop/
 dconf/
 dolphinrc
 environment.d/
@@ -13,4 +12,3 @@ obsidian/
 opencode/
 session/
 systemd/
-
