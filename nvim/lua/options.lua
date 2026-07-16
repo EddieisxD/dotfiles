@@ -64,8 +64,8 @@ vim.o.guicursor = ""
 vim.opt.guicursor:append("n-v-c:block-CursorNormal")
 vim.opt.guicursor:append("i-ci-ve:block-CursorBlue")
 vim.opt.guicursor:append("r-cr:hor20,o:hor50")
-vim.api.nvim_set_hl(0, "CursorNormal", { fg = "#000000", bg = "#FAFAFA" }) -- Blue block for Normal
-vim.api.nvim_set_hl(0, "CursorBlue",   { fg = "#000000", bg = "#B8CC52" }) -- Green line for Insert
+-- vim.api.nvim_set_hl(0, "CursorNormal", { fg = "#000000", bg = "#FAFAFA" }) -- Blue block for Normal
+-- vim.api.nvim_set_hl(0, "CursorBlue",   { fg = "#000000", bg = "#B8CC52" }) -- Green line for Insert
 
 --- Search
 vim.o.hlsearch = true          -- Highlight all search matches

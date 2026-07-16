@@ -1,0 +1,13 @@
+
+# Initial application window size
+fork = false
+# frame = "full"
+frame = "none" 
+maximized = false
+
+[box-drawing]
+mode = "native" # Optimizes terminal box line rendering
+
+[font]
+normal = ["JetBrainsMono Nerd Font"]
+size = 14.0

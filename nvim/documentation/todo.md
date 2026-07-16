@@ -37,3 +37,15 @@ This checklist tracks the missing features and configurations needed to build ou
 ##   7. Terminal & Debugging (Optional)
 - [ ] Configure floating/toggleable terminal window (`akinsho/toggleterm.nvim`)
 - [ ] Install debugger client & UI (`nvim-dap` & `nvim-dap-ui`)
+
+---
+
+## Migrations
+- [ ] lualine -> heirline
+- [ ] telescope -> tv.nvim
+- [ ] newtr -> oil.nvim / snacks.nvim / yazi.nvim
+- [ ] obsidian.nvim -> logseq-mode.nvim
+
+
+
+

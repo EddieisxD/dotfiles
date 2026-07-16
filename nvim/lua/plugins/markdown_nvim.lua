@@ -8,10 +8,10 @@ return {
         acknowledge_conflicts = true,
         debounce = 30,
         heading = {
-            border = true,
+            border = false,
         },
         bullet = {
-            icons = { '●', '○', '▪', '▫' },
+            icons = { '●', '○', '◉', '◎' },
         },
         anti_conceal = {
             ignore = {

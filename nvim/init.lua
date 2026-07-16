@@ -3,7 +3,6 @@ if vim.loader then
   vim.loader.enable()
 end
 
-
 if vim.g.neovide then
     require("modules.neovide")
 end
@@ -12,6 +11,5 @@ end
 require("autocommands")
 require("options")
 require("keybinds")
-require("transparent_nvim")
-
 require("lazy_plugin_manager")
+require("transparent_nvim")
