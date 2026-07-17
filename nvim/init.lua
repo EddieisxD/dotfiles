@@ -9,7 +9,9 @@ end
 
 -- require("vim._core.ui2").enable({})
 require("autocommands")
-require("options")
-require("keybinds")
 require("lazy_plugin_manager")
 require("transparent_nvim")
+-- require("theme.cursor_mode").setup()
+require("options")
+require("language_settings")
+require("keybinds")

@@ -16,11 +16,11 @@ vim.o.linebreak = true
 vim.o.textwidth = 0
 
 --- Gutter
-vim.wo.number = true;
-vim.wo.relativenumber = true;
-vim.wo.numberwidth = 2    -- Minimum width of the number column
-vim.wo.signcolumn = "yes" -- Always show sign column ("yes", "auto", "no")
-vim.wo.foldcolumn = "1"   -- Show a fold column ("0" to "9", or "auto")
+vim.opt.number = true;
+vim.opt.relativenumber = true;
+vim.opt.numberwidth = 4    -- Minimum width of the number column
+vim.opt.signcolumn = "yes" -- Always show sign column ("yes", "auto", "no")
+vim.opt.foldcolumn = "1"   -- Show a fold column ("0" to "9", or "auto")
 
 vim.o.formatoptions = "jcroql"  -- Vim default
 
@@ -59,14 +59,6 @@ vim.o.equalalways = true         -- Resize splits equally
 vim.o.winminwidth = 10           -- Minimum width for a window
 vim.o.winminheight = 1           -- Minimum height for a window
 
---- cursor style
-vim.o.guicursor = ""
-vim.opt.guicursor:append("n-v-c:block-CursorNormal")
-vim.opt.guicursor:append("i-ci-ve:block-CursorBlue")
-vim.opt.guicursor:append("r-cr:hor20,o:hor50")
--- vim.api.nvim_set_hl(0, "CursorNormal", { fg = "#000000", bg = "#FAFAFA" }) -- Blue block for Normal
--- vim.api.nvim_set_hl(0, "CursorBlue",   { fg = "#000000", bg = "#B8CC52" }) -- Green line for Insert
-
 --- Search
 vim.o.hlsearch = true          -- Highlight all search matches
 vim.o.incsearch = true         -- Show matches as you type
@@ -87,5 +79,4 @@ vim.o.spell = false              -- Enable spell check
 vim.o.spelllang = "en_us"       -- Language(s) to check. Can be list: {"en_us", "de_de"}
 vim.opt.spelloptions:append("camel")  -- Check camelCase words as well
 
---- Completions
-vim.opt.completeopt = "menu,noselect,fuzzy"
+vim.cmd("cabbrev h tab help")

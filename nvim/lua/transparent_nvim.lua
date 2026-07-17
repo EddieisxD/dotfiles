@@ -6,6 +6,7 @@ local function apply_transparency()
         "LineNr", "FoldColumn",
         "VertSplit",
         "StatusLine", "StatusLineNC",
+        "TabLineFill",
         "MsgArea",
     }
     for _, g in ipairs(groups) do

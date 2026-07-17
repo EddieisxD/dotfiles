@@ -1,3 +1,5 @@
-return {
-    colorscheme = 'tokyodark',
+local settings = {
+    colorscheme = 'onedark_dark',
 }
+
+return settings

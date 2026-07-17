@@ -26,10 +26,21 @@ return {
         -- C-k: Toggle signature help (if signature.enabled = true)
         --
         -- See :h blink-cmp-config-keymap for defining your own keymap
-        keymap = { preset = 'default' },
+        keymap = {
+            preset = 'default',
+            ['<TAB>'] = { 'accept' }
+        },
 
         -- (Default) Only show the documentation popup when manually triggered
-        completion = { documentation = { auto_show = false } },
+        completion = {
+            documentation = { auto_show = false },
+            list = {
+                selection = {
+                    preselect = true,
+                    auto_insert = true,
+                },
+            },
+        },
 
         -- (Default) list of enabled providers defined so that you can extend it
         -- elsewhere in your config, without redefining it, due to `opts_extend`
@@ -38,6 +49,6 @@ return {
         -- (Default) Rust fuzzy matcher for typo resistance and significantly better performance
         -- You may use a lua implementation instead by using `implementation = "lua"`
         -- See the fuzzy documentation for more information
-        fuzzy = { implementation = "lua" }
+        fuzzy = { implementation = "rust" }
     },
 }

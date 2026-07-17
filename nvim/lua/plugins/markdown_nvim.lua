@@ -9,6 +9,22 @@ return {
         debounce = 30,
         heading = {
             border = false,
+            -- foregrounds = {
+            --     "@markup.heading.1.markdown",
+            --     "@markup.heading.2.markdown",
+            --     "@markup.heading.3.markdown",
+            --     "@markup.heading.4.markdown",
+            --     "@markup.heading.5.markdown",
+            --     "@markup.heading.6.markdown",
+            -- },
+            -- backgrounds = {
+            --     "@text.title.1.markdown",
+            --     "@text.title.2.markdown",
+            --     "@text.title.3.markdown",
+            --     "@text.title.4.markdown",
+            --     "@text.title.5.markdown",
+            --     "@text.title.6.markdown",
+            -- },
         },
         bullet = {
             icons = { '●', '○', '◉', '◎' },

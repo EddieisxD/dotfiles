@@ -47,6 +47,7 @@ vim.api.nvim_create_autocmd("FileType", {
 })
 ```
 
+
 ### B. The Modern 0.11+ Declarative APIs: `vim.lsp.config` & `vim.lsp.enable`
 Neovim 0.11+ splits LSP management into two steps:
 1. **Registration**: `vim.lsp.config(name, config)` maps a server name to its startup settings. (Neovim loads these automatically if placed inside `~/.config/nvim/lsp/<server_name>.lua`).

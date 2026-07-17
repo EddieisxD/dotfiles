@@ -1,0 +1,9 @@
+return {
+    lsp = {
+        name = 'clangd',
+        cmd = { 'clangd' },
+        filetypes = { 'c', 'cpp', 'objc', 'objcpp' },
+        root_markers = { 'compile_commands.json', '.clangd', '.git' },
+        settings = {},
+    },
+}
