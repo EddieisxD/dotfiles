@@ -1,5 +1,5 @@
 local settings = {
-    colorscheme = 'onedark_dark',
+    colorscheme = 'carbonfox',
 }
 
 return settings

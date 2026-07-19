@@ -1,12 +1,29 @@
- font-size = 12
- background-opacity = 0.6
- background = "#000000"
- window-padding-balance = true
- font-family = "JetBrainsMono Nerd Font Mono"
- window-padding-y = 12
- window-padding-x = 12
- window-decoration = false
- window-padding-color = "extend"
- gtk-tabs-location = "hidden"
- confirm-close-surface = false
- scrollbar = "never"
+font-size = 12
+
+background = "#000000"
+background-opacity = 0.4
+background-blur = 100
+background-blur-radius = 100
+
+font-family = "JetBrainsMono Nerd Font Mono"
+
+window-padding-balance = true
+window-padding-y = 12
+window-padding-x = 12
+
+window-decoration = false
+window-padding-color = "extend"
+
+gtk-tabs-location = "hidden"
+confirm-close-surface = false
+scrollbar = "never"
+
+window-inherit-working-directory = false
+tab-inherit-working-directory = true
+split-inherit-working-directory = true
+ 
+adjust-cell-width  = 0%
+adjust-cell-height = 0%
+
+adjust-cursor-height = 40%
+adjust-cursor-thickness = -40%

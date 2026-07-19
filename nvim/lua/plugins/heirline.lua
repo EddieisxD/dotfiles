@@ -36,7 +36,7 @@ return {
             end,
             static = {
                 mode_names = {
-                    n = "N",
+                    n = "Normal",
                     no = "N?",
                     nov = "N?",
                     noV = "N?",
@@ -45,16 +45,16 @@ return {
                     niR = "Nr",
                     niV = "Nv",
                     nt = "Nt",
-                    v = "V",
+                    v = "Visual",
                     vs = "Vs",
-                    V = "V_",
+                    V = "Visual",
                     Vs = "Vs",
-                    ["\22"] = "^V",
-                    ["\22s"] = "^V",
+                    ["\22"] = "Visual",
+                    ["\22s"] = "Visual",
                     s = "S",
                     S = "S_",
                     ["\19"] = "^S",
-                    i = "I",
+                    i = "Insert",
                     ic = "Ic",
                     ix = "Ix",
                     R = "R",
@@ -229,7 +229,7 @@ return {
 
     local FileType = {
         provider = function()
-            return string.upper(vim.bo.filetype)
+            return (vim.bo.filetype)
         end,
         hl = { fg = utils.get_highlight("Type").fg, bold = true },
     }
@@ -259,13 +259,6 @@ return {
         InactiveStatusline, DefaultStatusline,
     }
 
-    local TablineBufnr = {
-        provider = function(self)
-            return tostring(self.bufnr) .. ". "
-        end,
-        hl = "Comment",
-    }
-
     local TablineFileName = {
         provider = function(self)
             local filename = self.filename
@@ -273,7 +266,7 @@ return {
             return filename
         end,
         hl = function(self)
-            return { bold = self.is_active or self.is_visible, italic = true }
+            return { bold = self.is_active or self.is_visible }
         end,
     }
 
@@ -321,32 +314,8 @@ return {
             end,
             name = "heirline_tabline_buffer_callback",
         },
-        TablineBufnr,
         TablineFileName,
         TablineFileFlags,
-    }
-
-    local TablineCloseButton = {
-        condition = function(self)
-            return not vim.api.nvim_get_option_value("modified", { buf = self.bufnr })
-        end,
-        { provider = " " },
-        {
-            provider = "x",
-            hl = { fg = "gray" },
-            on_click = {
-                callback = function(_, minwid)
-                    vim.schedule(function()
-                        vim.api.nvim_buf_delete(minwid, { force = false })
-                        vim.cmd.redrawtabline()
-                    end)
-                end,
-                minwid = function(self)
-                    return self.bufnr
-                end,
-                name = "heirline_tabline_close_buffer_callback",
-            },
-        },
     }
 
     local TablineBufferBlock = utils.surround({ " ", " " }, function(self)
@@ -355,7 +324,7 @@ return {
         else
             return utils.get_highlight("TabLine").bg
         end
-    end, { TablineFileNameBlock, TablineCloseButton })
+    end, { TablineFileNameBlock })
 
     local BufferLine = utils.make_buflist(
         TablineBufferBlock,
@@ -369,13 +338,17 @@ return {
     vim.api.nvim_create_autocmd("ColorScheme", {
         callback = function()
             utils.on_colorscheme(setup_colors)
+            vim.api.nvim_set_hl(0, "TabLineSel", { bg = "none" })
+            vim.api.nvim_set_hl(0, "TabLine", { bg = "none" })
         end,
         group = "Heirline",
     })
+    vim.api.nvim_set_hl(0, "TabLineSel", { bg = "none" })
+    vim.api.nvim_set_hl(0, "TabLine", { bg = "none" })
     require("heirline").load_colors(colors)
     require("heirline").setup({
         statusline = StatusLines,
-        tabline = { BufferLine },
+        tabline = { { provider = "   " }, BufferLine },
     })
 end,
 }

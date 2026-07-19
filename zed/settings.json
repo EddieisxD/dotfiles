@@ -42,7 +42,7 @@
   "theme": {
     "mode": "dark",
     "light": "Ayu Light",
-    "dark": "Catppuccin Espresso (Blur) [Light]",
+    "dark": "Catppuccin Espresso (Blur)",
   },
   "lsp": {
     "json-language-server": {

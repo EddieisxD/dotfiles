@@ -1,3 +1,4 @@
+
 local function apply_transparency()
     local groups = {
         "Normal", "NormalNC",
